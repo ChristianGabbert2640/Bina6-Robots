@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>Repositorio sobre Robots</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-image: linear-gradient(to right, rgba(255, 0, 60, 0.552), rgba(128, 0, 255, 0.552)), url('portada.webp');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    }
+    nav {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+    }
+    .dropdown {
+      position: relative;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #444;
+      top: 100%;
+      left: 0;
+      border-radius: 4px;
+      min-width: 200px;
+      z-index: 1;
+    }
+    .dropdown-content a {
+      display: block;
+      padding: 8px 12px;
+      color: white;
+      text-decoration: none;
+    }
+    .dropdown-content a:hover {
+      background-color: #555;
+    }
+    section.contenido {
+      display: none;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    section.contenido.activo {
+      display: block;
+    }
+    footer {
+      background-color: #1e1e1e;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>¡DESCUBRE EL MUNDO DE LOS ROBOTS!</h1>
+    <h2>Software, Hardware, Etica, Aplicaciones, entre otras cosas</h2>
+  </header>
+
+  <nav>
+    <div class="dropdown">
+      <a onclick="showSection('Intro-General')">Introducción</a>
+    </div>
+    <div class="dropdown">
+      <a onclick="showSection('Codigo-General')">Código y Software ▾</a>
+      <div class="dropdown-content">
+        <a onclick="showSection('Codigo-Algoritmos')">Algoritmos de control</a>
+        <a onclick="showSection('Codigo-Lenguajes')">Lenguajes de alto nivel</a>
+        <a onclick="showSection('Codigo-Software')">Software utilizados</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a onclick="showSection('Diseno-General')">Diseño y Hardware ▾</a>
+      <div class="dropdown-content">
+        <a onclick="showSection('Diseno-Modelos3D')">Impresoras 3D</a>
+        <a onclick="showSection('Diseno-Sensores')">Hardware de Robots</a>
+        <a onclick="showSection('Diseno-Dispositivos')">Dispositivos electrónicos</a>
+        <a onclick="showSection('Diseno-DisenoRobots')">Diseño de robots</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a onclick="showSection('Proyectos-General')">Proyectos y Aplicaciones ▾</a>
+      <div class="dropdown-content">
+        <a onclick="showSection('Proyectos-Industriales')">Robots industriales</a>
+        <a onclick="showSection('Proyectos-Servicio')">Robots de servicio</a>
+        <a onclick="showSection('Proyectos-Auton')">Robots autónomos</a>
+        <a onclick="showSection('Proyectos-Educativa')">Robótica educativa</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a onclick="showSection('Etica-General')">Ética y Seguridad ▾</a>
+      <div class="dropdown-content">
+        <a onclick="showSection('Etica-Impacto')">Impacto ético</a>
+        <a onclick="showSection('Etica-Consideraciones')">Consideraciones éticas</a>
+        <a onclick="showSection('Etica-Humana-Maquinas')">Ética Humana contra la Ética de las Máquinas</a>
+        <a onclick="showSection('Etica-Ciberseguridad')">Ciberseguridad en la Robótica</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="Intro-General" class="contenido activo">
+      <h2>Introducción</h2>
+      <br>
+      <h3><span>1</span>¿Que son los robots?</h3>
+      <br>
+      <p>Los robots, son máquinas diseñadas para realizar tareas de manera autónoma o semiautónoma, estos están revolucionando diversos sectores. En la industria, se utilizan para mejorar la eficiencia en procesos como ensamblaje y soldadura. En el ámbito doméstico, los robots de servicio, como los de limpieza, facilitan las tareas cotidianas. Además, los robots médicos y autónomos están cambiando el panorama de la salud y el transporte. Con el avance de la robótica, el futuro promete nuevos desafíos y oportunidades en todos los aspectos de la vida.</p>
+      <br>
+      <h3><span>2</span>¿Que veremos en este articulo?</h3>
+      <br>
+      <p>Vamos a ver en que nos puede afectar o beneficiar el desarrollo y aplicaion de los robots en lavida cotidiana de muchas personas, al igual en lo que pueden ser realmente utiles y si es que hay una posibilidadde que los robots reemplacen las personas en los trabajos profesionales y</p>
+      <br>
+      <a onclick="showSection('Codigo-General')"<p style="color: blue;">Código y Software</p></a>
+    </section>
+    <section id="Codigo-General" class="contenido">
+      <h2>Código y Software</h2>
+      <br>
+      <p>El desarrollo de la robótica moderna ha sido posible gracias a la integración de sistemas de control avanzados, lenguajes de programación especializados y herramientas de software diseñadas para modelar, simular y ejecutar tareas complejas. En este contexto, el código y el software se convierten en los elementos fundamentales que permiten a los robots interactuar con su entorno, procesar información y tomar decisiones de manera autónoma o asistida.</p>
+      <br>
+      <p>Comprender cómo funcionan los algoritmos de control, qué lenguajes de programación son los más utilizados y qué software facilita la creación y prueba de robots, es esencial para cualquier profesional o estudiante interesado en esta disciplina. A través de este tema se analizarán los principales enfoques y recursos digitales que hacen posible el diseño funcional de sistemas robóticos, desde su concepción en entornos virtuales hasta su implementación práctica en el mundo físico.</p>
+      <a onclick="showSection('Codigo-Algoritmos')"<p style="color: blue;">Algoritmos de control</p></a>
+    </section>
+    <section id="Diseno-General" class="contenido">
+      <h2>Diseño y Hardware</h2>
+      <br>
+      <p>El diseño y hardware son pilares fundamentales en la construcción de robots, ya que determinan sus capacidades físicas, nivel de autonomía y adaptabilidad al entorno. Desde la estructura mecánica hasta los sensores y actuadores, cada componente debe ser cuidadosamente seleccionado y configurado para cumplir con las funciones asignadas. Además, la evolución de tecnologías como la impresión 3D ha ampliado las posibilidades en el diseño de prototipos robóticos funcionales, rápidos y rentables.</p>
+      <a onclick="showSection('Diseno-Modelos3D')"<p style="color: blue;">Impresoras 3D</p></a>
+    </section>
+    <section id="Proyectos-General" class="contenido">
+      <h2>Proyectos y Aplicaciones</h2>
+      <br>
+      <p>Los robots han transformado múltiples áreas del mundo mediante proyectos y aplicaciones que van desde la industria hasta la educación, desempeñando un papel clave en la automatización y la mejora de la calidad de vida. Los robots autónomos se caracterizan por operar sin intervención humana constante, aplicándose en tareas como la exploración espacial, la agricultura de precisión o la limpieza automatizada, mientras que los robots educativos fomentan el aprendizaje de ciencia, tecnología y programación en niños y jóvenes, integrándose como herramientas interactivas en el aula. Por su parte, los robots de servicio apoyan en actividades cotidianas como el cuidado de personas mayores, la atención en hoteles o la entrega de productos, mostrando cómo la robótica puede humanizarse para satisfacer necesidades sociales. Finalmente, los robots industriales, fundamentales en fábricas y líneas de producción, han revolucionado procesos mediante su precisión y eficiencia, impulsando avances en sectores como la automotriz, la electrónica y la manufactura en general.
+      <br>
+      <a onclick="showSection('Proyectos-Industriales')"<p style="color: blue;">Robots industriales</p></a>
+    </section>
+    <section id="Etica-General" class="contenido">
+      <h2>Ética y Seguridad</h2>
+      <br>
+      <p>La robótica plantea importantes desafíos éticos y de seguridad al integrarse cada vez más en la sociedad, ya que su uso influye en el empleo, la privacidad, la autonomía humana y las decisiones morales que antes solo correspondían a las personas. El impacto ético del uso de robots exige desarrollar sistemas capaces de actuar según principios morales, dando lugar a la idea de las "máquinas éticas", necesarias para evitar abusos o daños colaterales, especialmente en entornos como la salud o la seguridad pública. Estas consideraciones éticas abarcan desde la programación de decisiones morales hasta la responsabilidad legal de sus actos, y se debaten dentro del campo de la roboética, que cuestiona si los robots deben regirse por una ética humana o desarrollar una propia. Paralelamente, la ciberseguridad en la robótica se vuelve crucial para proteger los datos y garantizar el funcionamiento seguro de estos sistemas, dado que una vulnerabilidad puede ser explotada con consecuencias graves. En conjunto, ética y seguridad son pilares fundamentales para un desarrollo robótico responsable, que garantice la confianza, el bienestar y la justicia en un mundo cada vez más automatizado.
+      <br> 
+      <a onclick="showSection('Etica-Impacto')"<p style="color: blue;">Impacto ético en la sociedad</p></a>
+    </section>
+    <section id="Codigo-Algoritmos" class="contenido">
+      <h2>Algoritmos de control</h2>
+      <br>
+      <a href="https://lovtechnology.com/sistemas-de-control-avanzados-en-robotica-pid-y-mas-alla/#google_vignette"><img src="PIB.jpg" height="200" width="300" align="right"></a>
+      <p>En la robótica moderna, los algoritmos de control son fundamentales para asegurar el correcto funcionamiento de los robots, permitiéndoles ejecutar tareas de forma eficiente y segura. Uno de los algoritmos más usados es el control PID (Proporcional, Integral y Derivativo), el cual se emplea ampliamente por su simplicidad y efectividad en el control de sistemas dinámicos. Este algoritmo ajusta continuamente la salida del sistema en función del error entre el valor deseado y el real, lo que lo convierte en una herramienta esencial en tareas como el control de velocidad o posición (<a href="https://lovtechnology.com/sistemas-de-control-avanzados-en-robotica-pid-y-mas-alla/#google_vignette">Lov Technology, 2021</a>).</p>
+      <br>
+      <p>Además del PID, existen algoritmos más complejos como los modelos de control adaptativo, predictivo y óptimo, que permiten a los robots responder de forma dinámica a cambios en el entorno y optimizar su rendimiento en tareas específicas. Estos algoritmos se aplican, por ejemplo, en la planificación de trayectorias, navegación autónoma y coordinación de múltiples robots (<a href="https://es.linkedin.com/advice/0/what-most-effective-algorithms-robotics-control-planning?lang=es">LinkedIn, s.f.</a>).</p>
+      <a onclick="showSection('Codigo-Lenguajes')"<p style="color: blue;">Lenguajes de alto nivel para programación robótica</p></a>
+  </section>
+    <section id="Codigo-Lenguajes" class="contenido">
+      <h2>Lenguajes de alto nivel para programación robótica</h2>
+      <br>
+      <a href="https://makeblock.com.ar/lenguajes-para-programar-robots/  "><img src="PY.jpg" width="300" height="200" align="right"></a>
+      <p>El desarrollo de robots industriales y educativos requiere el uso de lenguajes de programación de alto nivel, los cuales permiten una mayor abstracción y facilidad para diseñar comportamientos complejos. Entre los más utilizados se encuentran Python, por su sintaxis simple y numerosas bibliotecas para inteligencia artificial y visión por computadora; y C/C++, debido a su eficiencia en el manejo de hardware y su uso extendido en plataformas robóticas (<a href="https://makeblock.com.ar/lenguajes-para-programar-robots/">Makeblock, s.f.</a>).</p>
+      <br>
+      <p>En el ámbito industrial, también se emplean lenguajes específicos de cada fabricante, como RAPID (de ABB), KRL (de KUKA), y otros lenguajes estructurados que permiten el control detallado de los movimientos, rutinas y condiciones de operación de los robots. Estos lenguajes están orientados a tareas repetitivas y precisas, comunes en líneas de producción automatizadas (<a href="https://www.esneca.lat/blog/programacion-robots-industriales-clasificacion/#:~:text=El%20lenguaje%20más%20usado%20en,de%20pruebas%20de%20las%20máquinas">Esneca, s.f.</a>  ).</p>
+
+      <a onclick="showSection('Codigo-Software')"<p style="color: blue;">Software utilizados para la creación de robots</p></a>
+    </section>
+    <section id="Codigo-Software" class="contenido">
+      <h2>Software utilizados para la creación de robots</h2>
+      <br>
+      <a href="https://semaiq.com/los-mejores-softwares-para-la-simulacion-de-robots-en-2024/"><img src="SFW.jpg" width="350" height="250" align="right"></a>
+      <p>El diseño y simulación de robots requiere herramientas de software que permitan probar virtualmente sus funciones antes de implementarlas en el mundo real. Entre los más destacados se encuentran ROS (Robot Operating System), una plataforma de código abierto que proporciona bibliotecas y herramientas para desarrollar aplicaciones robóticas complejas, y Gazebo, que permite simular entornos realistas para probar algoritmos de navegación y control (<a href="https://semaiq.com/los-mejores-softwares-para-la-simulacion-de-robots-en-2024/">Semaiq, 2024</a>).</p>
+      <br>
+      <p>Existen también soluciones como V-REP (CoppeliaSim), Webots, y MATLAB/Simulink, que ofrecen entornos integrados para modelado, simulación y análisis. Estos programas son clave en la validación de algoritmos de control, planificación de movimiento y percepción, facilitando la transición del diseño virtual al desarrollo físico de los robots (<a href="https://www.infoplc.net/blogs-automatizacion/item/108013-7-tipos-software-robotica-podria-considerar-robot">Infoplc.net, 2023</a>).</p>
+      <a onclick="showSection('Diseno-General')"<p style="color: blue;">Diseño y Hardware</p></a>
+    </section>
+    <section id="Diseno-Modelos3D" class="contenido">
+      <h2>Impresoras 3D</h2>
+      <a href="https://www.edsrobotics.com/blog/impresion-3d-y-robotica/"><img src="3d.jpeg" width="300" height="200" align="right"></a>
+      <p>La impresión 3D es una tecnología revolucionaria que permite la creación de objetos físicos a partir de modelos digitales, utilizando materiales como plásticos, resinas y metales. Esta técnica ha sido clave en la industria de la robótica porque permite fabricar piezas personalizadas con rapidez y precisión. El proceso involucra métodos como FDM, SLA y SLS, que varían en función de la precisión, resistencia y velocidad requeridas para cada aplicación (<a href="https://www.3ds.com/es/make/guide/process/3d-printing">Dassault Systèmes, s.f.</a>).</p>
+      <br>
+      <p>En el campo de la robótica, la impresión 3D ha facilitado la fabricación de componentes adaptados a las necesidades específicas de cada robot, como estructuras ligeras y piezas móviles. Esto permite a los diseñadores experimentar con diferentes configuraciones y realizar ajustes rápidos en etapas de prototipado. Además, fomenta la innovación en el diseño de partes mecánicas complejas que antes eran costosas o imposibles de fabricar mediante métodos tradicionales (<a href="https://www.edsrobotics.com/blog/impresion-3d-y-robotica/">EDS Robotics, s.f.</a>).</p>
+      <a onclick="showSection('Diseno-Sensores')"<p style="color: blue;">Hardware que usan los robots</p></a>
+    </section>
+    <section id="Diseno-Sensores" class="contenido">
+      <a href="https://www-protolabs-com.translate.goog/en-gb/resources/blog/manufacturing-robotics-report-hardware/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc"><img src="hardware.jpg" width="300" height="200" align="right"></a>
+      <h2>Hardware que usan los robots</h2>
+      <p>El funcionamiento de un robot depende en gran medida de su hardware, el cual incluye motores, sensores, estructuras y sistemas de energía. Estos elementos permiten que el robot perciba su entorno y actúe en consecuencia. Los robots combinan sensores que recopilan datos del entorno, procesadores que analizan esa información y actuadores que ejecutan las acciones necesarias. Esta integración de hardware posibilita que los robots realicen tareas automatizadas con alta eficiencia (<a href="https://courses.minnalearn.com/es/courses/emerging-technologies/robotics-and-automation/how-do-robots-work/">MinnaLearn, s.f.</a>).</p>
+      <br>
+      <p>Las decisiones sobre el hardware robótico también se ven influenciadas por el entorno de uso y la naturaleza de las tareas a realizar. Según <a href="https://www-protolabs-com.translate.goog/en-gb/resources/blog/manufacturing-robotics-report-hardware/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc">Protolabs (s.f.)</a>, en la industria manufacturera se está apostando por diseños robustos y modulares que faciliten la reparación, el mantenimiento y la actualización de los sistemas. Estos enfoques permiten adaptar los robots a los cambios en la línea de producción, incrementando su utilidad y ciclo de vida.</p>
+
+      <a onclick="showSection('Diseno-Dispositivos')"<p style="color: blue;">Dispositivos electrónicos y actuadores</p></a>
+    </section>
+    <section id="Diseno-Dispositivos" class="contenido">
+      <h2>Dispositivos Electrónicos y Actuadores</h2>
+      <a href="https://www.konetia-automatizacion.com/actuadores-en-robotica/#:~:text=El%C3%A9ctricos:%20Los%20actuadores%20el%C3%A9ctricos%20m%C3%A1s,movimiento%20rotativo%20en%20sus%20ejes"><img src="Actuador.jpg" width="300" height="250" align="right"></a>
+      <p>Los actuadores son los componentes que permiten el movimiento de los robots y se clasifican comúnmente en eléctricos, neumáticos e hidráulicos. Los eléctricos, como los servomotores y motores paso a paso, son ampliamente utilizados por su precisión, bajo mantenimiento y control sencillo. Estos actuadores convierten la energía eléctrica en movimiento rotativo o lineal y se aplican en tareas que requieren movimientos precisos y repetibles (<a href="https://www.konetia-automatizacion.com/actuadores-en-robotica/#:~:text=Eléctricos:%20Los%20actuadores%20eléctricos%20más,movimiento%20rotativo%20en%20sus%20ejes">Konetia Automatización, s.f.</a>).</p>
+      <br>
+      <p>Los sensores, por otro lado, dotan a los robots de la capacidad de interactuar con su entorno. Existen diversos tipos según su función: sensores de fuerza, de proximidad, de visión, entre otros. Cada uno de ellos cumple un papel esencial en la toma de decisiones del sistema robótico, ya que proporcionan información en tiempo real que se traduce en acciones. Gracias a estos sensores, los robots pueden evitar obstáculos, medir distancias, detectar objetos y trabajar de forma colaborativa con humanos (<a href="https://www.universal-robots.com/mx/blog/sensores-en-robótica-cuáles-utilizar-en-sus-aplicaciones/">Universal Robots, s.f.</a>).</p>
+      <a onclick="showSection('Diseno-DisenoRobots')"<p style="color: blue;">Diseño de robots</p></a>
+    </section>
+    <section id="Diseno-DisenoRobots" class="contenido">
+      <h2>Diseño de Robots</h2>
+      <img src="DISEÑO.jpg" width="300" height="250" align="right"  >
+      <p>El diseño de robots no solo contempla la parte mecánica, sino también la selección adecuada de actuadores que permitirán el desempeño eficiente de las tareas asignadas. Por ejemplo, se deben considerar factores como el tipo de movimiento que se desea generar (lineal o rotativo), la carga que se va a mover y la precisión requerida. El diseño influye directamente en la funcionalidad, la velocidad de respuesta y la eficiencia del robot (<a href="https://www.konetia-automatizacion.com/actuadores-en-robotica/#:~:text=Eléctricos:%20Los%20actuadores%20eléctricos%20más,movimiento%20rotativo%20en%20sus%20ejes">Konetia Automatización, s.f.</a>).</p>
+      <br>
+      <p>Además, un buen diseño incorpora sensores que permiten al robot adaptarse a su entorno. Estos sensores se integran con el sistema de control para facilitar tareas como la navegación, la detección de objetos o la interacción con personas. Esta etapa de diseño debe considerar tanto la estructura física como la inteligencia del robot, asegurando que sus acciones respondan de forma coherente a los estímulos externos (<a href="https://www.universal-robots.com/mx/blog/sensores-en-robótica-cuáles-utilizar-en-sus-aplicaciones/">Universal Robots, s.f.</a>).</p>
+
+      <a onclick="showSection('Proyectos-General')"<p style="color: blue;">Proyectos y Aplicaciones</p></a>
+    </section>
+    <section id="Proyectos-Industriales" class="contenido">
+      <h2>Robots industriales</h2>
+      <img src="RI.jpg" width="300" height="200" align="right">
+      <p>Los robots industriales se han convertido en elementos clave en la automatización de procesos productivos. Tal como indica MadeHow, estos robots están equipados con brazos mecánicos que pueden realizar tareas repetitivas con precisión y velocidad, como ensamblaje, soldadura o embalaje, siendo comunes en industrias como la automotriz y la electrónica (<a href="https://www.madehow.com/Volume-5/Industrial-Robot.html">MadeHow, s.f.</a>).</p>
+      <br>
+      <p>Telefónica señala que existen distintos tipos de robots industriales —como los robots cartesianos, SCARA, y antropomórficos—, cada uno con aplicaciones específicas. Su implementación mejora la eficiencia, reduce errores y minimiza riesgos laborales al asumir tareas peligrosas o extenuantes, lo que refuerza su importancia en el contexto de la industria 4.0 (<a href="https://empresas.blogthinkbig.com/robotica-industrial-tipos-usos/">Telefónica, 2021</a>).</p>
+      <a onclick="showSection('Proyectos-Servicio')"<p style="color: blue;">Robots de servicio</p></a>
+    </section>
+    <section id="Proyectos-Servicio" class="contenido">
+      <h2>Robots de servicio</h2>
+      <p>Los robots de servicio están diseñados para asistir a las personas en actividades cotidianas, y actualmente se emplean en sectores como la hostelería, el comercio y la salud. En el video de YouTube, se muestra cómo estos robots interactúan con los usuarios, ofrecen información y ejecutan tareas como servir comida o brindar orientación, demostrando sus capacidades sociales y funcionales (<a href="https://www.youtube.com/watch?v=5vVgJ2gERtA">YouTube, 2023</a>).</p>
+      <br>
+      <iframe width="560" height="315" src="https://www.youtube.com/watch?v=Chth7dPKClU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <br>
+      <p>Por su parte, Integritas destaca que los robots de servicio personal contribuyen significativamente a la eficiencia operativa en espacios públicos y privados. Se utilizan tanto en atención al cliente como en contextos educativos y de vigilancia, lo que evidencia su versatilidad y su potencial para mejorar la calidad de vida de las personas (<a href="https://integritas.com.mx/robotica-de-servicio-personal-que-es-y-como-se-utiliza/">Integritas, s.f.</a>).</p>
+      <a onclick="showSection('Proyectos-Auton')"<p style="color: blue;">Robots autónomos</p></a>
+    </section>
+    <section id="Proyectos-Auton" class="contenido">
+      <h2>Robots autónomos</h2>
+      <p>Los robots autónomos son máquinas capaces de ejecutar tareas sin intervención humana directa, gracias a tecnologías como la inteligencia artificial y los sensores avanzados. Este tipo de robots puede adaptarse a diferentes entornos y tomar decisiones por sí mismos, lo cual los hace ideales para aplicaciones donde la supervisión constante es limitada (<a href="https://www.edsrobotics.com/blog/robots-autonomos/">EDS Robotics, s.f.</a>).</p>
+      <img src="RA.jpg" width="300" height="250 align="left">  <img src="RA2.jpg" width="300" height="250 align="left">
+      <p>Estos sistemas inteligentes están diseñados para operar con independencia, utilizando datos del entorno para navegar, tomar decisiones y completar tareas complejas. Se han vuelto indispensables en campos como la logística, el transporte y la exploración espacial (<a href="https://www.msmk.edu.es/blog/que-son-los-robots-autonomos-y-como-funcionan/">MSMK University, s.f.</a>).</p>
+      <a onclick="showSection('Proyectos-Educativa')"<p style="color: blue;">Robótica educativa</p></a>
+    </section>
+    <section id="Proyectos-Educativa" class="contenido">
+      <h2>Robótica educativa</h2>
+      <p>El uso de la robótica en el ámbito educativo permite que los estudiantes desarrollen habilidades en programación, lógica y resolución de problemas a través de actividades prácticas. Como se muestra en el contenido de Google, los robots se integran en el aula como herramientas interactivas que motivan el aprendizaje de ciencia y tecnología, adaptándose a diversas edades y niveles escolares (<a href="https://edu.google.com/intl/es-419_ALL/why-google/edtech/robotics/">Google, s.f.</a>).</p>
+      <br>
+      <p>Además, la robótica educativa combina la teoría con la práctica mediante kits y plataformas accesibles, lo que permite una mejor asimilación de conocimientos STEM (ciencia, tecnología, ingeniería y matemáticas). Según Iberdrola, este enfoque promueve el trabajo en equipo, el pensamiento crítico y la creatividad desde edades tempranas, preparando a los estudiantes para los retos tecnológicos del futuro (<a href="https://www.iberdrola.com/innovacion/robotica-educativa">Iberdrola, s.f.</a>).</p>
+      <iframe width="460" height="215" src="https://www.youtube.com/watch?v=5DGd9be-0f4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <br>
+      <a onclick="showSection('Etica-General')"<p style="color: blue;">Ética y Seguridad</p></a>
+    </section>
+    <section id="Etica-Impacto" class="contenido">
+      <h2>Impacto ético en la sociedad</h2>
+      <p>La integración de la robótica y la inteligencia artificial plantea dilemas éticos, sociales y jurídicos que requieren atención. El impacto en el empleo, la privacidad y la toma de decisiones automatizada debe ser analizado desde una perspectiva de derechos humanos para garantizar un desarrollo tecnológico justo (<a href="https://www.researchgate.net/publication/343998772_Etica_y_impacto_social_de_la_IA_en_el_trabajo">Fernández & Jiménez, 2020</a>).</p>
+      <br>
+      <iframe width="560" height="315" src="https://www.youtube.com/watch?v=qrKuHYoTPbU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <p>La idea de una máquina ética se relaciona con la posibilidad de programar robots que tomen decisiones morales. Existen tres motivos fundamentales para desarrollar este tipo de tecnologías: la responsabilidad, la confianza pública y la prevención de consecuencias negativas imprevistas (<a href="https://www.elpais.com/tecnologia/la-inteligencia-artificial-necesita-tener-etica-para-tomar-decisiones-morales.html">Gavilan, 2019</a>).</p>
+      <br>
+      <p>El desarrollo de robots plantea la interrogante sobre si representan una revolución positiva o una amenaza para la humanidad. La automatización y la sustitución de tareas humanas generan preocupaciones sobre el control, la dependencia tecnológica y el futuro del trabajo (<a href="https://www.dw.com/es/la-inteligencia-artificial-revolución-o-amenaza/a-61613538">DW Documental, 2022</a>).</p>
+      <a onclick="showSection('Etica-Consideraciones')"<p style="color: blue;">Consideraciones éticas en el desarrollo robótico</p></a>
+    </section>
+    <section id="Etica-Consideraciones" class="contenido">
+      <h2>Consideraciones éticas en el desarrollo robótico</h2>
+      <p>Para lograr sistemas autónomos moralmente aceptables, es esencial incorporar principios éticos desde su diseño. Esto implica enfoques multidisciplinarios que aborden la responsabilidad, transparencia y toma de decisiones basada en valores humanos (<a href="https://www.springer.com/gp/book/9783030102994">Charisi et al., 2017</a>).</p>
+      <br>
+      <img src="C.E.jpg" width="450" height="250 align="left">
+      <p>La seguridad en los sistemas de robótica impulsados por inteligencia artificial es un tema prioritario. Existen numerosos métodos actuales que abordan amenazas, pero también desafíos en su implementación efectiva y oportunidades para fortalecer los marcos de protección (<a href="https://www.springer.com/gp/book/9783030714700">Neupane et al., 2023</a>).</p>
+      <a onclick="showSection('Etica-Humana-Maquinas')"<p style="color: blue;">Ética Humana contra la Ética de las Máquinas</p></a>
+    </section>
+    <section id="Etica-Humana-Maquinas" class="contenido">
+      <h2>Ética Humana contra la Ética de las Máquinas</h2>
+      <p>El debate sobre si las entidades artificiales merecen consideración moral ha cobrado relevancia. La literatura académica explora la posibilidad de reconocer ciertos derechos o valores a sistemas inteligentes si alcanzan niveles de agencia similares a los humanos (<a href="https://www.researchgate.net/publication/352941824_Human_Moral_Consideration_of_Artificial_Entities">Harris & Reese Anthis, 2021</a>).</p>
+      <br>
+      <p>La roboética es el campo que estudia los dilemas éticos y morales relacionados con la creación y uso de robots. Examina los límites de la ética humana frente a la lógica de las máquinas, proponiendo marcos normativos para su coexistencia (<a href="https://es.wikipedia.org/wiki/Robo%C3%A9tica">Wikipedia, 2023</a>).</p>
+      <img src="HM.jpg" width="400" height="250 align="left">
+      <br>
+      <a onclick="showSection('Etica-Ciberseguridad')"><p style="color: blue;">Ciberseguridad en la Robótica</p></a>
+    </section>
+    
+    <section id="Etica-Ciberseguridad" class="contenido">
+      <h2>Ciberseguridad en la Robótica</h2>
+      <img src="CS.jpg" width="300" height="200" align="right">
+      <p>La protección contra ataques informáticos en entornos robóticos es crucial para evitar manipulaciones, malfuncionamientos o vulneraciones de datos sensibles. La ciberseguridad se convierte así en un componente esencial del desarrollo responsable de estas tecnologías (<a href="https://link.springer.com/chapter/10.1007/978-3-030-47180-5_11">Neupane et al., 2023</a>).</p>
+      <br>
+      <p>La ética en la inteligencia artificial y la robótica incluye la obligación de garantizar su uso seguro. La privacidad, la protección de datos y la prevención de abusos tecnológicos son pilares en la construcción de un entorno digital éticamente sólido (<a href="https://www.ciberseguridad.com/etica-y-privacidad-en-la-inteligencia-artificial/">Ciberseguridad.com, s.f.</a>).</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Repositorio sobre Robots. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section.contenido').forEach(sec => sec.classList.remove('activo'));
+      document.getElementById(id).classList.add('activo');
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+    document.querySelectorAll('nav .dropdown').forEach(dd => {
+      dd.addEventListener('mouseover', () => dd.querySelector('.dropdown-content').style.display = 'block');
+      dd.addEventListener('mouseout',  () => dd.querySelector('.dropdown-content').style.display = 'none');
+    });
+  </script>
+</body>
+</html>
